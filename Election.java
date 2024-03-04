@@ -12,9 +12,6 @@ public class Election
         int Vote;
         int Vote1;
         int Vote2;
-        NumberFormat money = NumberFormat.getCurrencyInstance();
-        NumberFormat number = NumberFormat.getIntegerInstance();
-        NumberFormat decimal = NumberFormat.getNumberInstance();
         NumberFormat percent = NumberFormat.getPercentInstance();
         percent.setMinimumFractionDigits(2);
         Scanner input = new Scanner(System.in);
@@ -47,8 +44,8 @@ public class Election
         System.out.println("Connecticut \t" + nVote2 + " " + Vote2);
         System.out.println("---------Election Results---------");
         System.out.println("Candidates \tVotes Percentage");
-        System.out.println(name + "\t\t" + nTotal + "\t" + percent.format(nPerc));
-        System.out.println(name1 + "\t" + Total + "\t" + percent.format(Perc));
+        System.out.println(name + " \t\t" + nTotal + "    " + percent.format(nPerc));
+        System.out.println(name1 + " \t\t" + Total + "    " + percent.format(Perc));
         System.out.println("TOTAL VOTES:\t" + vTotal);
 
     }
