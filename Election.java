@@ -38,14 +38,14 @@ public class Election
         double nPerc = (double) nTotal / vTotal;
         double Perc = (double) Total / vTotal;
         System.out.println("---------Election Data---------");
-        System.out.println("\t\t" + name + " " + name1);
-        System.out.println("New York \t" + nVote + " " + Vote);
-        System.out.println("New Jersey \t" + nVote1 + " " + Vote1);
-        System.out.println("Connecticut \t" + nVote2 + " " + Vote2);
+        System.out.println("\t\t" + name + "\t" + name1);
+        System.out.println("New York \t" + nVote + "\t" + Vote);
+        System.out.println("New Jersey \t" + nVote1 + "\t" + Vote1);
+        System.out.println("Connecticut \t" + nVote2 + "\t" + Vote2);
         System.out.println("---------Election Results---------");
-        System.out.println("Candidates \tVotes Percentage");
-        System.out.println(name + " \t\t" + nTotal + "    " + percent.format(nPerc));
-        System.out.println(name1 + " \t\t" + Total + "    " + percent.format(Perc));
+        System.out.println("Candidates \tVotes\tPercentage");
+        System.out.println(name + " \t\t" + nTotal + "\t" + percent.format(nPerc));
+        System.out.println(name1 + " \t\t" + Total + "\t" + percent.format(Perc));
         System.out.println("TOTAL VOTES:\t" + vTotal);
 
     }
