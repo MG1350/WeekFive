@@ -12,6 +12,11 @@ public class Election
         int Vote;
         int Vote1;
         int Vote2;
+        NumberFormat money = NumberFormat.getCurrencyInstance();
+        NumberFormat number = NumberFormat.getIntegerInstance();
+        NumberFormat decimal = NumberFormat.getNumberInstance();
+        NumberFormat percent = NumberFormat.getPercentInstance();
+        percent.setMinimumFractionDigits(2);
         Scanner input = new Scanner(System.in);
         System.out.print("Enter an name: ");
         name = input.nextLine();
@@ -33,20 +38,18 @@ public class Election
         int nTotal = (nVote+nVote1+nVote2);
         int Total = (Vote+Vote1+Vote2);
         int vTotal = nTotal + Total;
-        NumberFormat money = NumberFormat.getCurrencyInstance();
-        NumberFormat number = NumberFormat.getIntegerInstance();
-        NumberFormat decimal = NumberFormat.getNumberInstance();
-        NumberFormat percent = NumberFormat.getPercentInstance();
+        double nPerc = (double) nTotal / vTotal;
+        double Perc = (double) Total / vTotal;
         System.out.println("---------Election Data---------");
         System.out.println("\t\t" + name + " " + name1);
         System.out.println("New York \t" + nVote + " " + Vote);
         System.out.println("New Jersey \t" + nVote1 + " " + Vote1);
         System.out.println("Connecticut \t" + nVote2 + " " + Vote2);
         System.out.println("---------Election Results---------");
-        System.out.println("Candidates \t Votes Percentage");
-        System.out.println(name + "\t\t" + nTotal + " " + percent.format(vTotal-Total));
-        System.out.println(name1 + "\t\t" + Total + " " + percent.format(vTotal-nTotal));
-        System.out.println(percent.format(nVote2));
+        System.out.println("Candidates \tVotes Percentage");
+        System.out.println(name + "\t\t" + nTotal + "\t" + percent.format(nPerc));
+        System.out.println(name1 + "\t" + Total + "\t" + percent.format(Perc));
+        System.out.println("TOTAL VOTES:\t" + vTotal);
 
     }
 }
