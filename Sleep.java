@@ -10,7 +10,10 @@ public class Sleep
         int Cyear;
         int Cmonth;
         int Cday;
+        NumberFormat money = NumberFormat.getCurrencyInstance();
+        NumberFormat number = NumberFormat.getIntegerInstance();
         NumberFormat decimal = NumberFormat.getNumberInstance();
+        NumberFormat percent = NumberFormat.getPercentInstance();
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your birthdate: ");
         System.out.print("Year: ");
