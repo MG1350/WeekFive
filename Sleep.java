@@ -10,6 +10,7 @@ public class Sleep
         int Cyear;
         int Cmonth;
         int Cday;
+        NumberFormat decimal = NumberFormat.getNumberInstance();
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your birthdate: ");
         System.out.print("Year: ");
@@ -25,8 +26,12 @@ public class Sleep
         Cmonth = input.nextInt();
         System.out.print("Day: ");
         Cday = input.nextInt();
+        input.close();
         System.out.println(year +"/"+ month + "/" + day + " " + Cyear + "/" + Cmonth + "/" + Cday);
-
-        
+        int Pdays = year * 365 + month * 30 + day;
+        int Cdays = Cyear * 365 + Cmonth * 30 + Cday;
+        int Ddays = Cdays - Pdays;
+        System.out.println("You have been alive for " + decimal.format(Ddays) + " days");
+        System.out.println("You have slept for " + decimal.format(Ddays*8) + " hours");
     }
 }
